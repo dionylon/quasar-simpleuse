@@ -33,7 +33,21 @@ module.exports = function (ctx) {
     framework: {
       iconSet: 'material-icons', // Quasar icon set
       lang: 'en-us', // Quasar language pack
-
+      // global color theme
+      config: {
+        brand: {
+          primary: '#dedede',
+          secondary: '#bdbdbd',
+          accent: '#6A48D7',
+  
+          dark: '#1d1d1d',
+  
+          positive: '#21BA45',
+          negative: '#C10015',
+          info: '#31CCEC',
+          warning: '#F2C037'
+        }
+      },
       // Possible values for "all":
       // * 'auto' - Auto-import needed Quasar components & directives
       //            (slightly higher compile time; next to minimum bundle size; most convenient)

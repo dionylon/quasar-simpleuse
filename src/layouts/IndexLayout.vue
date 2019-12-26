@@ -1,14 +1,14 @@
 <template>
   <q-layout view="lHh lpR fFf">
-    <q-header elevated class="bg-primary text-white" height-hint="98">
+    <q-header reveal elevated class="bg-primary text-black" height-hint="98">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
 
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg" />
+            <img :src="avatarUrl" />
           </q-avatar>
-          Title
+          Dionys
         </q-toolbar-title>
       </q-toolbar>
 
@@ -19,9 +19,9 @@
       </q-tabs>
     </q-header>
 
-    <q-drawer v-model="left" show-if-above :width="300" :breakpoint="400">
+    <q-drawer v-model="left" :width="300" :breakpoint="400">
       <q-scroll-area
-        style="height: calc(100% - 250px); margin-top: 150px; border-right: 1px solid #ddd"
+        style="height: calc(100% - 250px); margin-top: 250px; border-right: 1px solid #ddd"
       >
         <q-list padding>
           <q-item clickable v-ripple>
@@ -34,7 +34,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item active clickable v-ripple>
+          <q-item clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="star" />
             </q-item-section>
@@ -60,7 +60,7 @@
             </q-item-section>
 
             <q-item-section>
-              Drafts
+              dionylon@163.com
             </q-item-section>
           </q-item>
         </q-list>
@@ -68,15 +68,15 @@
 
       <q-img
         class="absolute-top"
-        src="https://cdn.quasar.dev/img/material.png"
+        src="http://pic1.win4000.com/wallpaper/2018-01-03/5a4c4e905c089.jpg"
         style="height: 250px; text-align:center;"
       >
-        <div class="absolute-top bg-transparent">
+        <div class="absolute-top text-black bg-transparent">
           <q-avatar size="150px" class="q-mb-sm">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            <img :src="avatarUrl" />
           </q-avatar>
           <div class="text-weight-bold">Dionys</div>
-          <div></div>
+          <div>If you want it, go get it.</div>
         </div>
       </q-img>
     </q-drawer>
@@ -84,6 +84,14 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <!-- place QPageScroller at end of page -->
+    <q-page-scroller
+      position="bottom-right"
+      :scroll-offset="150"
+      :offset="[18, 18]"
+    >
+      <q-btn fab icon="keyboard_arrow_up" color="secondary" />
+    </q-page-scroller>
   </q-layout>
 </template>
 
@@ -91,6 +99,7 @@
 export default {
   data() {
     return {
+      avatarUrl: "https://s2.ax1x.com/2019/12/26/lE3VmD.png",
       left: false
     };
   }

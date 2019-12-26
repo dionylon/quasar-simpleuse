@@ -1,13 +1,9 @@
 <template>
   <div class="q-pa-md">
     <div class="row justify-center q-gutter-sm">
-      <q-intersection
-        v-for="index in 10"
-        :key="index"
-        class="example-item"
-      >
+      <q-intersection v-for="index in 10" :key="index" class="example-item">
         <q-card class="q-ma-sm">
-          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+          <img :src="imagUrl()" />
 
           <q-card-section>
             <div class="text-h6">文章 #{{ index }}</div>
@@ -21,12 +17,21 @@
 
 <script>
 export default {
-  // name: 'PageName',
+  name: 'home',
+  data() {
+    return {
+    }
+  },
+  methods: {
+    imagUrl() {
+      return 'https://uploadbeta.com/api/pictures/random/';
+    }
+  }
 }
 </script>
 
 <style lang="less" scoped>
-.example-item{
+.example-item {
   height: 330px;
   width: 300px;
 }
