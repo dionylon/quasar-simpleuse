@@ -19,6 +19,14 @@
 <script>
 export default {
   name: 'category',
+  data() {
+    
+  },
+  methods: {
+    onClick() {
+      // do something
+    }
+  }
 }
 </script>
 
