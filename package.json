@@ -20,7 +20,7 @@
     "@types/node-fetch": "^2.5.4",
     "apollo-server": "^2.9.15",
     "axios": "^0.18.1",
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "class-validator": "^0.11.0",
     "graphql": "^14.5.8",
     "less": "^3.10.3",
