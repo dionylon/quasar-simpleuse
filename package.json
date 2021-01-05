@@ -19,7 +19,7 @@
     "@types/mongoose": "^5.5.36",
     "@types/node-fetch": "^2.5.4",
     "apollo-server": "^2.9.15",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.11.0",
     "graphql": "^14.5.8",
